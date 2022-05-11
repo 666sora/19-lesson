@@ -18,7 +18,11 @@ int main () {
     char validation[4];
     photo.read(validation, sizeof(validation));
     if (validation[0] == -119 && validation[1] == 'P' 
-            && validation[2] == 'N' && validation[3] == 'G') {
+            && validation[2] == 'N' && validation[3] == 'G'
+            && filePath[filePath.length() - 1] == 'g'
+            && filePath[filePath.length() - 2] == 'n'
+            && filePath[filePath.length() - 3] == 'p'
+            && filePath[filePath.length() - 4] == '.') {
         std::cout << "It's a png file";
     }
     else {
