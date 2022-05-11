@@ -8,9 +8,12 @@ int main() {
     int max = 0;
     std::string maxName;
     while (!statement.eof()) {
-        std::string firstName, secondName, data;
+        std::string firstName = "0", secondName, data;
         int count;
         statement >> firstName >> secondName >> count >> data;
+        if (firstName == "0") {
+            continue;
+        }
         sum += count;
         if (count > max) {
             max = count;
